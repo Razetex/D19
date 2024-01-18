@@ -13,7 +13,7 @@ from .models import Author, Post, Categories, Reply
 
 class PostList(ListView):
     model = Post
-    ordering = '-time creating'
+    ordering = '-time_created'
     template_name = 'posts.html'
     context_object_name = 'posts'
     paginate_by = 5
@@ -83,7 +83,7 @@ class Replies(LoginRequiredMixin, ListView):
     model = Reply
     template_name = 'replies_user.html'
     context_object_name = 'replies'
-    ordering = '-date_created'
+    ordering = '-date_create'
     paginate_by = 5
 
     def get_queryset(self):

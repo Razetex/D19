@@ -5,8 +5,8 @@
 {% endblock title %}
 
 {% block content %}
-<h1>Все объявления</h1>
-   <h3>{{ time_now|date:'M d Y' }}</h3>
+<h1 style="text-align: center;">Все объявления</h1>
+   <h3 style="text-align: center;">{{ time_now|date:'M d Y' }}</h3>
 <br>
    {% if posts %}
         {% for post in posts %}
