@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://yastatic.net/s3/passport-sdk/autofill/v1/sdk-suggest-with-polyfills-latest.js"></script>
+        <title>{% block head_title %}{% endblock head_title %}</title>
+    </head>
+    <body>
+        YaAuthSuggest.init(
+          {
+             client_id: 'adfe921338434fd1a804b5d0ea65cf10',
+             response_type: 'token',
+             redirect_uri: 'http://127.0.0.1:8000/accounts/yandex/login/callback'
+          },
+          'http://127.0.0.1:8000'
+       )
+       .then(({
+          handler
+       }) => handler())
+       .then(data => console.log('Сообщение с токеном', data))
+       .catch(error => console.log('Обработка ошибки', error));
+        {% block body %}
+        {% block content %}
+        {% endblock content %}
+        {% endblock body %}
+        {% block extra_body %}
+        {% endblock extra_body %}
+    </body>
+</html>

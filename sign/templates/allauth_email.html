@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="https://yastatic.net/s3/passport-sdk/autofill/v1/sdk-suggest-token-with-polyfills-latest.js"></script>
+  <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <script>
+      window.onload = function() {
+         window.YaSendSuggestToken("http://127.0.0.1:8000/accounts/yandex/login/callback", {
+            "kek": true
+         });
+      };
+   </script>
+</body>
+</html>
